@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/root_view"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/playing_area"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/bg_griffindor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_griffindor"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:text="Griffindor"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/griffindor_score"
+                android:layout_gravity="center_horizontal"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="34sp" />
+
+            <TextView
+                android:id="@+id/players_guantity_griffindor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/fouls_griffindor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                style="@style/buttonStyle"
+                android:text="goal"
+                android:onClick="griffindorGoal"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                style="@style/buttonStyle"
+                android:onClick="griffindorCaughtTheSnitch"
+                android:text="golden snitch" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                style="@style/buttonStyle"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:onClick="griffindorGetFoul"
+                android:text="foul" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@android:color/white"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                style="@style/buttonStyle"
+                android:layout_gravity="center_horizontal"
+                android:onClick="griffindorPlayerLoss"
+                android:text="player loss" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bg_slytherin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_slytherin"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif"
+                android:text="Slytherin"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text=""
+                android:id="@+id/slytherin_score"
+                android:textColor="@android:color/white"
+                android:textSize="34sp" />
+
+            <TextView
+                android:id="@+id/players_guantity_slytherin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/fouls_slytherin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@android:color/white"
+                android:onClick="slytherinGoal"
+                style="@style/buttonStyle"
+                android:text="goal" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@android:color/white"
+                android:layout_marginRight="20dp"
+                android:onClick="slytherinCaughtTheSnitch"
+                android:layout_marginBottom="10dp"
+                style="@style/buttonStyle"
+                android:text="golden snitch" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="10dp"
+                style="@style/buttonStyle"
+                android:onClick="slytherinGetFoul"
+                android:text="foul" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                style="@style/buttonStyle"
+                android:layout_marginRight="20dp"
+                android:textColor="@android:color/white"
+                android:onClick="slytherinPlayerLoss"
+                android:text="player loss" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:textColor="@android:color/white"
+        android:onClick="reset"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        style="@style/buttonStyle"
+        android:text="reset"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:id="@+id/congrats"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="24sp"/>
+
+</LinearLayout>
